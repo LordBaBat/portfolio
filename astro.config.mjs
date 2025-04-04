@@ -4,6 +4,7 @@ import { defineConfig } from 'astro/config'
 export default defineConfig({
   site: 'https://corbiere-nolan.github.io',
   base: '/portefolio/',
+  adapter: github(),
   trailingSlash : 'always'
 })
 
