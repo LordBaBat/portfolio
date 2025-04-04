@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config'
 
 export default defineConfig({
-  site: 'https://corbiere-nolan.github.io',
-  base: 'test',
+  site: 'https://corbiere-nolan.github.io/',
+  
 })
 
