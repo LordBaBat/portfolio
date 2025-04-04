@@ -1,7 +1,7 @@
 ---
 title: GLPI
 publishDate: 2023-10-02 00:00:00
-img: ${import.meta.env.BASE_URL}assets/logo-glpi.png
+img: /assets/logo-glpi.png
 img_alt: logo glpi.
 description: |
   Decouverte d'un outils de gestion de parc informatique.
