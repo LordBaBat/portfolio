@@ -1,7 +1,7 @@
 ---
 title: GLPI
 publishDate: 2023-10-02 00:00:00
-img: /assets/logo-glpi.png
+img: ${import.meta.env.BASE_URL}assets/logo-glpi.png
 img_alt: logo glpi.
 description: |
   Decouverte d'un outils de gestion de parc informatique.
@@ -24,7 +24,7 @@ Plan de nommage : Chaque appareil est identifié par un code composé de son typ
 #### 3. Matrice d’urgence
 Un système de classification des incidents selon leur impact et leur urgence :
 
-![matrice d'urgence](/assets/Matrice_urgence_GLPI.png)
+![matrice d'urgence](.../assets/Matrice_urgence_GLPI.png)
 
 
 #### 4. Cycle de vie d’un ticket utilisateur
