@@ -1,4 +1,5 @@
 ---
+// Import des modules nécessaires
 import { type CollectionEntry, getCollection } from 'astro:content';
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -13,13 +14,12 @@ interface Props {
 	entry: CollectionEntry<'work'>;
 }
 
-// This is a dynamic route that generates a page for every Markdown file in src/content/
-// Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
-// https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
+// Fonction pour générer les pages dynamiques à partir de la collection "work"
 export async function getStaticPaths() {
 	const work = await getCollection('work');
 	return work.map((entry) => ({
-		params: { slug: entry.id },
+		// Vérifie que "slug" est bien une chaîne de caractères
+		params: { slug: entry.id.toString() }, // Utilise .toString() pour s'assurer que c'est une chaîne
 		props: { entry },
 	}));
 }
@@ -33,12 +33,13 @@ const { Content } = await render(entry);
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
+					<!-- Mettre à jour le lien pour utiliser le chemin de base correct -->
+					<a class="back-link" href="/portfolio/work/"><Icon icon="arrow-left" /> Work</a>
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
 								<pre>{JSON.stringify(entry.data, null, 2)}</pre> <!-- TEMPORAIRE pour debug -->
-                                {(entry.data?.tags ?? []).map((t) => <Pill>{t}</Pill>)}
+								{(entry.data?.tags ?? []).map((t) => <Pill>{t}</Pill>)}
 							</div>
 							<p class="description">{entry.data.description}</p>
 						</div>
@@ -59,6 +60,7 @@ const { Content } = await render(entry);
 </BaseLayout>
 
 <style>
+	/* Style inchangé */
 	header {
 		padding-bottom: 2.5rem;
 		border-bottom: 1px solid var(--gray-800);
