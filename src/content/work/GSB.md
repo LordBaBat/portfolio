@@ -5,7 +5,8 @@ img: /assets/gsb-logo.png
 img_alt: logo Gsb
 description: |
   Dévellopement d'un site pour les rapport de visite pour l'entreprise.
-
+tags:
+  - Dev
 ---
 
 ### 1. Introduction

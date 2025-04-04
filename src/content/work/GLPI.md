@@ -5,7 +5,8 @@ img: /assets/logo-glpi.png
 img_alt: logo glpi.
 description: |
   Decouverte d'un outils de gestion de parc informatique.
-
+tags:
+  - Dev
 ---
 
 ### GLPI ?
